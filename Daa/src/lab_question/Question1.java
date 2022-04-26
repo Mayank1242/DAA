@@ -36,11 +36,12 @@ public class Question1 {
 		        		
 		        		n--;
 
+		        		for(int k=0;k<i;k++){
+			        		System.out.print(arr[k]+" ");
+
+			    }
 		    }
 		    
-		    for(int k=0;k<arr.length;k++){
-		        		System.out.print(arr[k]+" ");
-
-		    }
+		    
 		}
 }
