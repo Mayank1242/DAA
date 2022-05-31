@@ -2,46 +2,50 @@ package lab_question;
 import java.util.*;
 
 public class Question1 {
-	  public static void insertionsort(int arr[],int size){
-	        for(int i=1;i<size;i++){
-	            int current=arr[i];
-	            int j=i-1;
-	            while(j>=0 && current<arr[j]){
-	                arr[j+1]=arr[j];
-	                j--;
-	            }
-	            arr[j+1]=current;
-	        }
-	    }
-		public static void main(String[] args) {
-			
+	
+	public static void main (String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("l");
+		int n=sc.nextInt();
+	   
+		while(n!=0){
+			 int count=0;
+		    int x=sc.nextInt();   //total point on chess
+		    int y=sc.nextInt();    //total points she want get
+		    int k;
 		    
-			Scanner sc=new Scanner(System.in);
-			System.out.println("\nenter the size of counter");
-			int n=sc.nextInt();
-		    int arr[]=new int[n];
+		    if(x==y){
+		    	count++;
+		        System.out.println(count);
+		        
+		    }else  if(x<y) {	
+		    	k=x+8;
+		        if(k>y){
+		        	count++;
+		            System.out.println(count);
+		        }
+		        
+		    }else {
 		    
-		    int i=0;
-		    int age;
-		    int size;
-		    
-		    while(n!=0){
-		        		System.out.println("\nenter age");
-		        		age=sc.nextInt();
-		        		
-		        		arr[i]=age;
-		        		i++;
-		        		
-		        		insertionsort(arr,i);
-		        		
-		        		n--;
-
-		        		for(int k=0;k<i;k++){
-			        		System.out.print(arr[k]+" ");
-
-			    }
+		    k=x+18;
+		    do {
+				count++;
+			}  while(k<y); {
+		    	k=k+18;
+		    	count++;
+		    }
+			System.out.println(count);
 		    }
 		    
 		    
+		   
+		    n--;
 		}
-}
+		    
+		    
+		    
+		    
+		}
+	}
+
