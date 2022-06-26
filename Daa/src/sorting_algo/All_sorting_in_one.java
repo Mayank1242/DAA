@@ -102,13 +102,7 @@ public static int partion(int arr[],int low,int high) {
     	System.out.print(arr[i]+  " ");
     }
     
-//    selection(arr);
-//System.out.println("\nafter selection sorting:");
-//    
-//    for(int i=0;i<n;i++) {
-//    	System.out.print(arr[i]+  " ");
-//    }
-    
+
     divide(arr, 0, n-1);
     System.out.println("\nafter merge sorting:"); 
     for(int i=0;i<n;i++) {

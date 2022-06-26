@@ -2,20 +2,21 @@ package sorting_algo;
 
 public class Q6_Heap_Sort {
 
-	public static void heapsort(int arr[]) {
-		int n=arr.length;
+	public static void heapsort(int arr[],int n) {
 		
-		for(int i=n/2-1;i>=0;i--) {
+		//Build heap function it for makeing a array to heap
+		for(int i=n/2;i>=0;i--) {
 			heapify(arr,n,i);
 		}
 		
-		for(int i=n-1;i>0;i--) {
+		for(int i=n;i>0;i--) {
 			int temp=arr[0];
 			arr[0]=arr[i];
 			arr[i]=temp;
 			heapify(arr,i,0);
 		}
 	}
+	//Make a array to heap.---------->
 	public static void heapify(int arr[],int n,int i) {
 		 int largest = i; // Initialize largest as root
 	        int l = 2 * i + 1; // left = 2*i + 1
@@ -41,10 +42,10 @@ public class Q6_Heap_Sort {
 	}
 	public static void main(String args[]) {
 		int arr[]= {1,2,4,5,6,89,0};
-		int n=arr.length;
+		int n=arr.length-1;
 		
 		
-		heapsort(arr);
+		heapsort(arr,n);
 		for(int i=0;i<n;i++) {
 			System.out.print(arr[i]+ " ");
 		}

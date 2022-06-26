@@ -22,7 +22,7 @@ public class Q7_Count_Sort {
 		}
 		int i=0;
 		int j=0;
-		while(max>=i ) {
+		while(i<=max ) {
 			if(newarr[i]>0) {
 				arr[j]=i;
 				newarr[i]--;

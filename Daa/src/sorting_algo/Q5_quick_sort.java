@@ -5,7 +5,7 @@ public class Q5_quick_sort {
 	public static int partiton(int arr[],int low,int high) {
 		int piviot=arr[high];
 		int i=low-1;
-		
+		// 2 1 4 5 4
 		for(int j=low;j<high;j++) {
 			if(arr[j]<piviot) {
 				i++;

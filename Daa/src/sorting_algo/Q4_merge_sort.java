@@ -7,6 +7,18 @@ public static void concqure(int  arr[],int si,int mid,int ei) {
 	int indx1=si;
 	int indx2=mid+1;
 	int x=0;
+/* 
+ *
+ * 2 3 1 4 5
+ * indx1=0
+ * indx2=3
+ * mid=2
+ * ei=4
+ * [2 ]
+ * x=1
+ * indx1=1
+ * 
+ */
 	
 while(indx1<=mid && indx2<=ei) {
 		if(arr[indx1]<=arr[indx2]) {
@@ -17,6 +29,7 @@ while(indx1<=mid && indx2<=ei) {
 			x++; indx2++;
 		}
 	}
+
 while(indx1<=mid ) {
 	merged[x]=arr[indx1];
 	x++; indx1++;
@@ -43,6 +56,16 @@ public static void divide(int arr[],int low,int high) {
 		 }
 		 
 }
+/*
+ * 0 2 1 4 4
+ * low=0
+ * high=3
+ * mid =low+(high-low)/2=0+4/2=2
+ * 0 ---- 1
+ * 2 ---- 3
+ *  0 2 1  4 4
+ * 
+ *  */
 		
 	public static void main(String args[]) {
 		int arr[]= {12,3,23,3,23,1,2,3,4,1212};

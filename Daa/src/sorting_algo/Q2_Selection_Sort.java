@@ -15,7 +15,23 @@ public class Q2_Selection_Sort {
 				arr[smallest]=temp;
 			}
 		}
-			
+/*
+ * 
+ * 
+ * 2 3 1 8
+ * smallest =1; 
+ * tp=2
+ * 1 3 2 8
+ * smallest =3
+ * j=2
+ * smallest 2.
+ * j=8
+ * temp=3
+ * 1 2 3 8
+ * 
+ * 
+ * 
+ */
 		public static void main(String args[]) {
 			int arr[]= {12,3,23,3,23,1,2,3,4,1212};
 			int n=arr.length;
